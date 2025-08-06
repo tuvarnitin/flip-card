@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    perspective: 1000px;
+}
+
+#card{
+    height: 500px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+}
+
+button{
+    all: unset;
+    background-color: #F75A5A;
+    border: 1px solid black;
+    padding: 6px 10px ;
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+#card-back,#card-front{
+    padding: 20px;
+    transition: all 1s ease-in-out;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    backface-visibility: hidden;
+    border: 1px solid black;
+}
+#card-back h1,#card-front h1{
+    font-size: 18px;
+}
+#back-img{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: flex;
+    transition: all 1.5s ease-in-out;
+    align-items: center;
+    justify-content: center;
+}
+.img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: black;
+}
+#front-img img{
+    transition: all 1.5s ease-in-out;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: all 1s ease-in-out;
+}
+
+#back-img img{
+    transition: all 1.5s ease-in-out;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    transition: all 1s ease-in-out;
+
+}
+#card-back{
+    transform: rotateY(180deg);
+}
+
+#social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+}
+
+#social-media i{
+    cursor: pointer;
+}
